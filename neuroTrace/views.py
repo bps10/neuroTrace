@@ -1,14 +1,16 @@
 # Create your views here.
 from django.template import RequestContext, loader
 from django.http import HttpResponse
-#from django.utils import simplejson
+
+from viewer.models import neuronInfo
 
 
 def index(request):
-
-    t = loader.get_template('index.html')
+    neuron_list = neuronInfo.objects.all()
+    t = loader.get_template('viewer/index.html')
     if request.method == 'GET':
 
-        c = RequestContext(request, {})
+        c = RequestContext(request, {
+            'neuron_list': neuron_list})
 
     return HttpResponse(t.render(c))

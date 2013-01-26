@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
     <style>
 
-        @import url("{{ STATIC_URL }}style/style.css");
+        @import url("{{ STATIC_URL }}style/viewer.css");
 
         </style>
     </head><body>
@@ -15,9 +15,11 @@
 
         <h1 align="center"> Neuron Data Viewer </h1>
 
-        <ul class="listArea"><b>Data selections</b><li>ModelVolt</li><li>ModelVoltSmall</li><li>QuadModel</li></ul>
+        <ul class="listArea"><b>Data selections</b></ul>
 
         <script>
+            var neuron_list = {{ neuron_list }}
+            var dataStuff = []
 
             var margin = {top: 20, right: 115, bottom: 140, left: 40},
                 margin2 = {top: 310, right: 115, bottom: 70, left: 40},
@@ -83,17 +85,7 @@
             var neuronData = null;
             var neuronMeta = null;
 
-            $.ajax({
-                   url: 'usrFiles/test.json',
-                   async: false,
-                   dataType: 'json',
-                   success: function (data) {
-                   $.each(data, function(key, val) {
-                          neuronList.push({name: key , links:  val });
-                          });
-                   neuronData = neuronList[0].links[0] + '.tsv';
-                   }
-                   });
+
 
             d3.select(".metaData")
             .selectAll("p")
