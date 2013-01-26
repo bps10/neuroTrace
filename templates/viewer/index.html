@@ -15,7 +15,11 @@
 
         <h1 align="center"> Neuron Data Viewer </h1>
 
-        <ul class="listArea"><b>Data selections</b></ul>
+        <ul class="listArea"><b>Data selections</b>
+            {% for neuron in neuron_list %}
+                <li> {{ neuron.neuron_name }}</li>
+            {% endfor %}
+            </ul>
 
         <script>
             var neuron_list = {{ neuron_list }}
