@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 
 <head>
-	<title>S3 POST Form</title> 
+	<title>S3 POST Form</title>
 	<style>
 		
 		@import url("{{ STATIC_URL }}style/base_uploader.css");
@@ -12,16 +12,16 @@
 
   <body>
 
-    <script src="../js/jquery.js" type="text/javascript"></script>
-      
+    <script src="{{ STATIC_URL }}js/jquery.js" type="text/javascript"></script>
+
     <h1> Input new data</h1>
-      
+
     <form action="send2aws.cgi" id="myForm">
 
 	  <br>
 	  1. Choose file to upload to S3:
-	  <input type="file" name="file"> 
-	  <br> 
+	  <input type="file" name="file">
+	  <br>
 	  <br>
 	  2. Add up to 4 meta data keys that will be queriable:
 	  <br>
@@ -75,9 +75,9 @@
 		//$.post('send2aws.py', values);
 
 		//console.log(values);
-        
+
     </script>
-  
+
   </body>
 </html>
 

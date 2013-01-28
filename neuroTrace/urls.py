@@ -8,8 +8,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'neuroTrace.views.index', name='index'),
-    # url(r'^neuroTrace/', include('neuroTrace.foo.urls')),
+    url(r'^$', 'neuroTrace.views.viewer', name='viewer'),
+    url(r'^upload/', 'neuroTrace.views.upload', name='upload'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
