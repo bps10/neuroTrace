@@ -5,5 +5,5 @@ local_settings.py
 *.nja
 .DS_STORE
 
-devDB.db
+*.db
 .elasticbeanstalk/

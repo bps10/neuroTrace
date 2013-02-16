@@ -82,7 +82,7 @@ if 'AWS_ACCESS_KEY_ID' in os.environ:
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = ()
+STATICFILES_DIRS = ('sitestatic/',)
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -98,8 +98,6 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
-
-
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -136,7 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    #'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',

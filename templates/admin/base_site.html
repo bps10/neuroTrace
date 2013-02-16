@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block stylesheet %}"{{ STATIC_URL }}admin/style/css/base.css"{% endblock %}
+{% block title %}{{ title }} | {% trans 'neuroTrace site admin' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'neuroTrace administration' %}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
